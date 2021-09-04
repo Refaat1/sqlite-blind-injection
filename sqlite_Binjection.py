@@ -5,10 +5,13 @@ ourvar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%^*()_-+\"{}[]()<>&"
 
 final = ""
 
+host  = "http://10.10.169.65:5000/challenge3/login"
+
+
 
 def func(payload):
     return requests.post(
-        "http://10.10.53.186:5000/challenge3/login",
+        host,
         data={
             "username": payload,
             "password": 1
